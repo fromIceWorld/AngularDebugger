@@ -1,0 +1,22 @@
+<div>work</div>
+<h4>---------------ng-container 嵌入式图----------------</h4>
+<ng-container *ngTemplateOutlet="tem1; context: myContext"></ng-container>
+
+<h4>----元素节点，属性节点-=-------</h4>
+<p>{{ title }}</p>
+
+<span [textContent]="'Hello ' + title"></span>
+
+<h4>-------指令----------</h4>
+<p back-color="blue" (dirEvent)="handleEvent($event)"></p>
+
+<p style="color: goldenrod;">----------本模块子组件--------</p>
+
+<app-card></app-card>
+
+<p style="color: indianred;">-----《child-module》的组件</p>
+
+<app-child></app-child>
+<ng-template #tem1 let-name>
+  <p>被嵌入的视图; 上下文:{{ name }}</p>
+</ng-template>
